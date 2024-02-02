@@ -1,0 +1,106 @@
+//
+// Place your HTML here
+//
+
+body {
+  background-color: #f7f2f7;
+  color: #47464f;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.4;
+  margin: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1c1b1f;
+}
+
+a {
+  color: #684dac;
+  font-weight: 500;
+
+  &:hover {
+    background-color: #684dac29;
+  }
+}
+
+// Styles for certain selected inline elements objects, like links.
+.mce-content-body [data-mce-selected="inline-boundary"] {
+  background-color: #d0bcff52;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* Apply a default padding if legacy cellpadding attribute is missing */
+table:not([cellpadding]) th,
+table:not([cellpadding]) td {
+  padding: .4rem;
+}
+
+/* Set default table styles if a table has a positive border attribute
+   and no inline css */
+table[border]:not([border="0"]):not([style*="border-width"]) th,
+table[border]:not([border="0"]):not([style*="border-width"]) td {
+  border-width: 1px;
+}
+
+/* Set default table styles if a table has a positive border attribute
+   and no inline css */
+table[border]:not([border="0"]):not([style*="border-style"]) th,
+table[border]:not([border="0"]):not([style*="border-style"]) td {
+  border-style: solid;
+}
+
+/* Set default table styles if a table has a positive border attribute
+   and no inline css */
+table[border]:not([border="0"]):not([style*="border-color"]) th,
+table[border]:not([border="0"]):not([style*="border-color"]) td {
+  border-color: #78768052;
+}
+
+figure {
+  display: table;
+  margin: 1rem auto;
+}
+
+figure figcaption {
+  color: #78768052;
+  display: block;
+  margin-top: .25rem;
+  text-align: center;
+}
+
+hr {
+  border-color: #78768052;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+}
+
+code {
+  background-color: #78768029;
+  border-radius: 3px;
+  padding: .1rem .2rem;
+}
+
+.mce-content-body:not([dir=rtl]) {
+  blockquote {
+    border-left: 2px solid #78768052;
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+  }
+}
+
+// RTL
+.mce-content-body[dir=rtl] {
+  blockquote {
+    border-right: 2px solid #78768052;
+    margin-right: 1.5rem;
+    padding-right: 1rem;
+  }
+}
