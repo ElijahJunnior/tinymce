@@ -2,9 +2,15 @@
 // Place your HTML here
 //
 
+@surface: #f1ecf1;
+@on-surface: #47464f;
+@on-surface-variant: #1c1b1f;
+@outline: #787680;
+@primary: #684dac;
+
 body {
-  background-color: #f7f2f7;
-  color: #47464f;
+  background-color: @surface;
+  color: @on-surface;
   font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.4;
   margin: 1rem;
@@ -16,21 +22,21 @@ h3,
 h4,
 h5,
 h6 {
-  color: #1c1b1f;
+  color: @on-surface-variant;
 }
 
 a {
-  color: #684dac;
+  color: @primary;
   font-weight: 500;
 
   &:hover {
-    background-color: #684dac29;
+    background-color: fade(@primary, 16%);
   }
 }
 
 // Styles for certain selected inline elements objects, like links.
 .mce-content-body [data-mce-selected="inline-boundary"] {
-  background-color: #d0bcff52;
+  background-color: fade(@primary, 32%);
 }
 
 table {
@@ -61,7 +67,7 @@ table[border]:not([border="0"]):not([style*="border-style"]) td {
    and no inline css */
 table[border]:not([border="0"]):not([style*="border-color"]) th,
 table[border]:not([border="0"]):not([style*="border-color"]) td {
-  border-color: #78768052;
+  border-color: fade(@outline, 32%);
 }
 
 figure {
@@ -70,27 +76,27 @@ figure {
 }
 
 figure figcaption {
-  color: #78768052;
+  color: fade(@outline, 32%);
   display: block;
   margin-top: .25rem;
   text-align: center;
 }
 
 hr {
-  border-color: #78768052;
+  border-color: fade(@outline, 32%);
   border-style: solid;
   border-width: 1px 0 0 0;
 }
 
 code {
-  background-color: #78768029;
+  background-color: fade(@on-surface, 16%);
   border-radius: 3px;
   padding: .1rem .2rem;
 }
 
 .mce-content-body:not([dir=rtl]) {
   blockquote {
-    border-left: 2px solid #78768052;
+    border-left: 2px solid fade(@outline, 32%);
     margin-left: 1.5rem;
     padding-left: 1rem;
   }
@@ -99,7 +105,7 @@ code {
 // RTL
 .mce-content-body[dir=rtl] {
   blockquote {
-    border-right: 2px solid #78768052;
+    border-right: 2px solid fade(@outline, 32%);
     margin-right: 1.5rem;
     padding-right: 1rem;
   }
